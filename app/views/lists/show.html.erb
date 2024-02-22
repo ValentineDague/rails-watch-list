@@ -1,0 +1,11 @@
+<%= render @bookmarks %>
+
+<p><strong>Lists</strong></p>
+<ul class="list-group">
+  <% @bookmarks.lists.each do |list| %>
+    <li class="list-group-item">
+    <%= list.name %>
+    <%= button_to "Add List", @list, method: :create %>
+</li>
+  <% end %>
+</ul>
